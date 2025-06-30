@@ -23,11 +23,33 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
+    .download-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #2ed573;
+      color: #000;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: background-color 0.3s;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    }
+    .download-button:hover {
+      background-color: #1abc9c;
+    }
+    .download-icon {
+      font-size: 1.5em;
+      vertical-align: middle;
+      margin-right: 8px;
     }
   </style>
 </head>
 <body>
   <h1>🎧 Слухай Ladyka Radio онлайн!</h1>
+
   <div class="player-wrapper">
     <iframe
       src="https://player.radioking.io/ladyka-radio/?c=%23000000&c2=%232ED573&f=h&i=1&p=1&s=1&li=1&popup=1&plc=0&h=145&l=470&v=2"
@@ -35,6 +57,10 @@
       frameborder="0">
     </iframe>
   </div>
+
+  <a class="download-button" href="https://api.radioking.io/radio/747244/listen.m3u" download>
+    <span class="download-icon">🎵</span>Завантажити плейлист
+  </a>
 
   <script type="text/javascript" src="https://player.radioking.io/scripts/iframe.bundle.js"></script>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -59,24 +59,6 @@
       border: none;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .button:hover {
-      background-color: #2ed573;
-      color: #000;
-    }
-
     .tips-box {
       margin: 40px auto 20px;
       max-width: 500px;
@@ -86,21 +68,29 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
+    .reload-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #2ed573;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .reload-link:hover {
+      background-color: #1abc9c;
+    }
+
     footer {
       background-color: #000;
       color: #aaa;
       text-align: center;
       padding: 15px;
       font-size: 0.9em;
-    }
-
-    a {
-      color: #2ed573;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
   </style>
@@ -118,16 +108,10 @@
 
     <div class="player-container">
       <iframe 
-        src="https://player.radioking.io/ladyka-radio/?c=%23000000&c2=%232ED573&f=h&i=1&p=1&s=1&li=1&popup=1&plc=0&h=145&l=470&v=2"
+        src="https://player.radioking.io/ladyka-radio/?c=%23000000&c2=%232ED573&f=h&i=1&p=1&s=1&li=0&popup=0&plc=0&h=145&l=470&v=2"
         allow="autoplay">
       </iframe>
     </div>
-
-    <br/>
-
-    <a class="button" href="https://player.radioking.io/ladyka-radio/" target="_blank">
-      Open Player in New Window
-    </a>
 
     <div class="tips-box">
       <h3>Не чути музику?</h3>
@@ -137,13 +121,13 @@
         <li>Спробуй відкрити цю сторінку в новому вікні</li>
         <li>Деякі браузери можуть блокувати прослуховування радіо</li>      
       </ul>
-        <a href="#">Перезавантажити сторінку</a>
+      <span class="reload-link" onclick="location.reload()">Перезавантажити сторінку</span>
     </div>
 
   </main>
 
   <footer>
-    © 2025 Ladyka Radio. All rights reserved.
+    © 2025 Ladyka Radio. Всі права захищені.
   </footer>
 
 </body>

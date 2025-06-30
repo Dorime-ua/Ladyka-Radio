@@ -1,67 +1,150 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ladyka Radio</title>
   <style>
     body {
-      background: linear-gradient(to right, #2ed573, #1e90ff);
+      margin: 0;
       font-family: Arial, sans-serif;
-      color: #fff;
+      background-color: #f4f4f4;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #000000, #0d0d0d);
+      padding: 30px 20px;
+      color: white;
       text-align: center;
-      padding-top: 100px;
     }
-    h1 {
+
+    header h1 {
+      margin: 0;
       font-size: 2em;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 5px #000;
     }
-    .player-wrapper {
-      display: inline-block;
+
+    header p {
+      margin: 5px 0 0;
+      color: #ccc;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .player-container {
       background-color: #000;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-      margin-bottom: 20px;
-    }
-    .download-button {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+      margin-top: 20px;
+    }
+
+    iframe {
+      border-radius: 5px;
+      width: 470px;
+      height: 145px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      border: none;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
       background-color: #2ed573;
       color: #000;
-      border-radius: 50px;
+    }
+
+    .tips-box {
+      margin: 40px auto 20px;
+      max-width: 500px;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #2ed573;
       text-decoration: none;
-      font-size: 1.2em;
-      transition: background-color 0.3s;
-      box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
     }
-    .download-button:hover {
-      background-color: #1abc9c;
+
+    a:hover {
+      text-decoration: underline;
     }
-    .download-icon {
-      font-size: 1.5em;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
+
   </style>
 </head>
 <body>
-  <h1>🎧 Слухай Ladyka Radio онлайн!</h1>
 
-  <div class="player-wrapper">
-    <iframe
-      src="https://player.radioking.io/ladyka-radio/?c=%23000000&c2=%232ED573&f=h&i=1&p=1&s=1&li=1&popup=1&plc=0&h=145&l=470&v=2"
-      style="border-radius: 5px; width: 470px; height: 145px; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);"
-      frameborder="0">
-    </iframe>
-  </div>
+  <header>
+    <h1>Ladyka Radio</h1>
+    <p>Your favorite music, anytime</p>
+  </header>
 
-  <a class="download-button" href="https://api.radioking.io/radio/747244/listen.m3u" download>
-    <span class="download-icon">🎵</span>Завантажити плейлист
-  </a>
+  <main>
+    <h2>Listen Live</h2>
+    <p>Enjoy your favorite music with our online radio player. Click play to start streaming!</p>
 
-  <script type="text/javascript" src="https://player.radioking.io/scripts/iframe.bundle.js"></script>
+    <div class="player-container">
+      <iframe 
+        src="https://player.radioking.io/ladyka-radio/?c=%23000000&c2=%232ED573&f=h&i=1&p=1&s=1&li=1&popup=1&plc=0&h=145&l=470&v=2"
+        allow="autoplay">
+      </iframe>
+    </div>
+
+    <br/>
+
+    <a class="button" href="https://player.radioking.io/ladyka-radio/" target="_blank">
+      Open Player in New Window
+    </a>
+
+    <div class="tips-box">
+      <h3>Can't hear the music?</h3>
+      <ul style="text-align: left;">
+        <li>Make sure your sound is turned on</li>
+        <li>Click the play button on the player</li>
+        <li>Try opening the player in a new window</li>
+        <li>Some browsers may block autoplay features</li>
+      </ul>
+      <p>Having trouble? <a href="#">Refresh the page</a> or <a href="#">contact support</a>.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 Ladyka Radio. All rights reserved.
+  </footer>
+
 </body>
 </html>
